@@ -248,28 +248,33 @@ const LandSelectionMap = ({ onLocationDataChange }) => {
       case "topographic":
         return {
           url: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
-          attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+          attribution:
+            'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
         };
       case "terrain":
         return {
           url: "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png",
-          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          attribution:
+            'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         };
       case "administrative":
         return {
           url: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
         };
       case "satellite":
         return {
           url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-          attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+          attribution:
+            "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
         };
       case "street":
       default:
         return {
           url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         };
     }
   };
@@ -365,15 +370,15 @@ const LandSelectionMap = ({ onLocationDataChange }) => {
             {mapView === "administrative" && "🏛️ Administrative Boundaries:"}
           </strong>
           <span className="ml-2">
-            {mapView === "topographic" && 
+            {mapView === "topographic" &&
               "Shows elevation contours, village names, and geographical features. Best for rural areas and small villages."}
-            {mapView === "street" && 
+            {mapView === "street" &&
               "Standard street map with roads, landmarks, and basic place names."}
-            {mapView === "satellite" && 
+            {mapView === "satellite" &&
               "High-resolution satellite imagery showing actual ground features."}
-            {mapView === "terrain" && 
+            {mapView === "terrain" &&
               "Emphasizes physical features like hills, valleys, and natural boundaries."}
-            {mapView === "administrative" && 
+            {mapView === "administrative" &&
               "Highlights administrative boundaries, districts, and populated places with clear labels."}
           </span>
         </div>
@@ -400,7 +405,10 @@ const LandSelectionMap = ({ onLocationDataChange }) => {
               Land Selection Instructions:
             </h4>
             <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
-              <li>• <strong>Choose the best map view:</strong> Use Topographic or Administrative for small villages</li>
+              <li>
+                • <strong>Choose the best map view:</strong> Use Topographic or
+                Administrative for small villages
+              </li>
               <li>• Click on the map to select 4 corner points of your land</li>
               <li>• Points selected: {boundaryPoints.length}/4</li>
               <li>

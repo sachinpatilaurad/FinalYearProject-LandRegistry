@@ -12,6 +12,7 @@ import FeaturesPage from "./components/FeaturesPage.jsx";
 import UserProfile from "./components/UserProfile.jsx";
 import UserManagement from "./components/UserManagement.jsx";
 import CertificateVerification from "./components/CertificateVerification.jsx";
+import ChatBot from "./components/ChatBot.jsx";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               </Routes>
             </main>
             <Footer />
+            <ChatBot />
           </div>
         </Router>
       </WalletProvider>
